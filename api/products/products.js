@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
     res.status(200).json( {message: 'GET Request to /products'} )
 })
 
-router.get('/:productId', (req, res) => {
+router.get('/productId', (req, res) => {
     // check if the productId = 'special'
     if(req.params.productId === 'special') {
         res.status(200).json( {message: 'You have a SPECIAL ID'} )
