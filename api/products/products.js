@@ -15,7 +15,11 @@ router.get('/productId', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    res.status(200).json( {message: 'POST Request to /products'} )
+    const createdProduct = {
+        nameObj: req.body.name,
+        priceObj: req.body.price
+    }
+    res.status(201).json( {message: 'POST Request to /products', product: createdProduct} )
 })
 
 router.put('/', (req, res) => {
