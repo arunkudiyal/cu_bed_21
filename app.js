@@ -15,7 +15,7 @@ app.use(bodyparser.urlencoded( {extended:false} ))
 app.use(bodyparser.json())
 
 // Managing your routes
-const productRoutes = require('./api/products/products')
+const productRoutes = require('./api/routes/products')
 app.use('/products', productRoutes)
 
 // Error Handling
