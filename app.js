@@ -3,6 +3,9 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const bodyparser = require('body-parser')
+const cors = require('cors')
+
+app.use( cors() )
 
 // Coonect to the Database
 mongoose.connect('mongodb+srv://arunkudiyal:examplepwd@cluster0.2pssb.mongodb.net/cu_21_db?retryWrites=true&w=majority')
