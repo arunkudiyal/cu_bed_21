@@ -18,10 +18,11 @@ router.get('/:productId', (req, res) => {
 
 router.post('/', (req, res) => {
     const product = new Product({
-        _id: mongoose.Types.ObjectId(),
-        name: req.body.name,
+        _id:  mongoose.Types.ObjectId(),
+        productName: req.body.name,
         price: req.body.price,
-        description: req.body.description
+        description: req.body.description,
+        amount: req.body.amount
     })
     product.save()
         .then(result => res.status(201).json( {new_message: 'POST Successful', createdPost: result} ))

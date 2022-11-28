@@ -28,7 +28,6 @@ document.querySelector('#submit-btn').addEventListener('click', e => {
                 console.log( JSON.parse(xhr.responseText) )
             }
         }
-
-        xhr.send(JSON.stringify(createdProduct))
+        xhr.send( JSON.stringify(createdProduct) )
     }
 } )
